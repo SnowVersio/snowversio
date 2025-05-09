@@ -81,10 +81,10 @@ t.clear_frame()
 # Simulate login prompt
 t.set_font("lucidaconsole.ttf", 15)
 t.gen_text(text="github login: ", row_num=1)
-t.gen_typing_text(text="snowversio", row_num=1, col_num=14, contin=True, speed=0.1)
+t.gen_typing_text(text="SnowVersio", row_num=1, col_num=14, contin=True, speed=0.1)
 t.clone_frame(10)
 t.gen_text(text="Password: ", row_num=2)
-t.gen_typing_text(text="********", row_num=2, col_num=10, contin=True, speed=0.1)
+t.gen_typing_text(text="***************", row_num=2, col_num=10, contin=True, speed=0.1)
 t.clone_frame(15)
 
 t.clear_frame()
@@ -107,7 +107,7 @@ t.gen_prompt(9)
 t.gen_typing_text(
     text="cat /proc/languages | head -n 4", row_num=9, contin=True, speed=0.1
 )
-t.gen_text(text="\x1b[34mTypeScript", row_num=10)
+t.gen_text(text="\x1b[34mPowershell", row_num=10)
 t.gen_text(text="\x1b[33mJavaScript", row_num=11)
 t.gen_text(text="\x1b[34mPython", row_num=12)
 t.gen_text(text="\x1b[32mC#", row_num=13)
@@ -116,10 +116,26 @@ t.gen_prompt(14)
 t.gen_typing_text(
     text="cat /proc/frameworks | head -n 2", row_num=14, contin=True, speed=0.1
 )
-t.gen_text(text="\x1b[32mVue", row_num=15)
-t.gen_text(text="\x1b[36mTailwindCSS", row_num=16)
+t.gen_text(text="\x1b[32mAngular", row_num=15)
+t.gen_text(text="\x1b[36mReact", row_num=16)
+t.gen_prompt(17)
+t.gen_typing_text(
+    text='echo "thanks for stopping by!" | owlspeak', row_num=17, contin=True, speed=0.3
+)
+owlspeak_output = r"""
+ _________________________ 
+< thanks for stopping by! >
+ ------------------------- 
+       .___,   
+    ___('v')___
+    `"-\._./-"'
+        ^ ^    
+"""
 
+t.gen_text(text=owlspeak_output, row_num=18, contin=True)
+t.gen_prompt(26)
 t.clone_frame(60)
+t.gen_typing_text("reboot", 26, contin=True, speed=0.1)
 t.clone_frame(5)
 t.clear_frame()
 init_line("Stopping services...", 1)
